@@ -60,8 +60,8 @@ $$
 
 Where:
 - $N$ is the number of papers.
-- $\text{Contribution Score}_i $ is the author's contribution score for paper $ i $.
-- $\text{Citations}_i$ is the number of citations for paper $ i $.
+- $\text{Contribution Score}_i$ is the author's contribution score for paper $i$.
+- $\text{Citations}_i$ is the number of citations for paper $i$.
 
 ---
 
