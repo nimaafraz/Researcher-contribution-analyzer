@@ -1,4 +1,4 @@
-# Author Contribution and Citation Analysis from BibTeX
+# Researcher Contribution and Citation Analysis from BibTeX
 
 This Python script analyzes an author's publications from a BibTeX file and computes various metrics to reflect their contribution and impact in research. The script also extracts citation counts from the `note` field in the BibTeX entries (only available in bibtex files exported from Scopus Profiles) and calculates a **weighted contribution score** based on the author's role in each paper and the number of citations.
 
@@ -31,7 +31,7 @@ The **Contribution Score** reflects the author's role in each paper. It assigns 
 
 The formula is:
 
-\[
+$$
 \text{Contribution Score} =
 \begin{cases}
 w_1 \times \frac{1}{\sqrt{\text{Number of Authors}}}, & \text{if First Author} \\
@@ -39,12 +39,13 @@ w_n \times \frac{1}{\sqrt{\text{Number of Authors}}}, & \text{if Last Author} \\
 \frac{w_m}{\text{Number of Authors}}, & \text{if Middle Author} \\
 0, & \text{if Not an Author}
 \end{cases}
-\]
+$$
+
 
 Where:
-- \( w_1 = 0.6 \) is the weight for **first authorship**.
-- \( w_n = 0.4 \) is the weight for **last authorship**.
-- \( w_m = 1.0 \) is the weight for **middle authorship**.
+- $ w_1 = 0.6 $ is the weight for **first authorship**.
+- $ w_n = 0.4 $ is the weight for **last authorship**.
+- $ w_m = 1.0 $ is the weight for **middle authorship**.
 
 ---
 
@@ -53,14 +54,14 @@ The **Weighted Contribution Score** measures the author's **impact** by multiply
 
 The formula is:
 
-\[
+$$
 \text{Weighted Contribution Score} = \sum_{i=1}^{N} (\text{Contribution Score}_i \times \text{Citations}_i)
-\]
+$$
 
 Where:
-- \( N \) is the number of papers.
-- \( \text{Contribution Score}_i \) is the author's contribution score for paper \( i \).
-- \( \text{Citations}_i \) is the number of citations for paper \( i \).
+- $N$ is the number of papers.
+- $\text{Contribution Score}_i $ is the author's contribution score for paper $ i $.
+- $\text{Citations}_i$ is the number of citations for paper $ i $.
 
 ---
 
@@ -115,7 +116,7 @@ note = {Cited by: 15; Conference name: ...}
 | Number of Middle-Author Papers             | 5       |
 | Total Contribution Score                   | 5.70    |
 | Average Contribution Score                 | 0.57    |
-| Weighted Contribution Score (Contribution \u00d7 Citations) | 114.20 |
+| Weighted Contribution Score (Contribution $\times$ Citations) | 114.20 |
 
 ---
 
