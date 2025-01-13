@@ -43,9 +43,9 @@ $$
 
 
 Where:
-- $ w_1 = 0.6 $ is the weight for **first authorship**.
-- $ w_n = 0.4 $ is the weight for **last authorship**.
-- $ w_m = 1.0 $ is the weight for **middle authorship**.
+- $w_1 = 0.6$ is the weight for **first authorship**.
+- $w_n = 0.4$ is the weight for **last authorship**.
+- $w_m = 1.0$ is the weight for **middle authorship**.
 
 ---
 
